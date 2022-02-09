@@ -31,8 +31,9 @@ while True:
         """The word receives 1 point, which is stored in the dictionary"""
 
         with open ("C:/Users/Mumle/Desktop/Ordsammenligning/data/database.txt", "w") as file:
-            file.write(json.dumps(word_dictionary))
+            file.write((json.dumps(word_dictionary)))
         """The chosen word is updated in the dictionary, receiving an additional point. This new dictionary is written to the database-document"""
 
     else: 
         print("Det var ikke et af ordene. Prøv igen.")
+
