@@ -3,11 +3,14 @@ import random
 
 with open("C:/Users/Mumle/Desktop/Ordsammenligning/data/ord.txt", "r") as word_list:
     words = [word.strip() for word in word_list]
+"""List of words are read"""
 
 with open("C:/Users/Mumle/Desktop/Ordsammenligning/data/point.txt", "r") as number_list:
     numbers = [int(number) for number in number_list]
+"""List of # points are read (default is 0). Numbers are cast into integers"""
     
 word_dictionary = dict(zip(words, numbers))
+"""List of words and list of # points are zipped into a dictionary. """
 
 while True:
     print("Hvilket ord kan du bedst lide? ")
@@ -29,16 +32,7 @@ while True:
 
         with open ("C:/Users/Mumle/Desktop/Ordsammenligning/data/database.txt", "w") as file:
             file.write(json.dumps(word_dictionary))
+        """The chosen word is updated in the dictionary, receiving an additional point. This new dictionary is written to the database-document"""
 
     else: 
         print("Det var ikke et af ordene. Prøv igen.")
-
-
-
-
-
-
-
-
-
-
